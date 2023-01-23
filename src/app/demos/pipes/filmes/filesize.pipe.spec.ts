@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 
 describe('FileSizePipe', () => {
 
+    //Teste de unidade
     describe('Teste Isolado', () => {
 
         const pipe = new FileSizePipe();
@@ -19,6 +20,7 @@ describe('FileSizePipe', () => {
 
     });
 
+    //Teste comportalmental
     describe('Teste comportamental do Pipe', () => {
 
         @Component({
@@ -34,17 +36,18 @@ describe('FileSizePipe', () => {
         let fixture: ComponentFixture<TestComponent>;
         let el: HTMLElement;
 
+        //setup antes do teste
         beforeEach(() => {
-            TestBed.configureTestingModule({
+            TestBed.configureTestingModule({ //testBed simula uma execucao
                 declarations: [
                     FileSizePipe,
                     TestComponent
                 ]
             });
 
-            fixture = TestBed.createComponent(TestComponent);
+            fixture = TestBed.createComponent(TestComponent); //instanciando um componente
             component = fixture.componentInstance;
-            el = fixture.nativeElement;
+            el = fixture.nativeElement; // itens do html
         });
 
         it('Deve converter bytes para MB', () => {
