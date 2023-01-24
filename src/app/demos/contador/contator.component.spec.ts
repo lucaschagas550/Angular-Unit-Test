@@ -6,7 +6,7 @@ describe('ContatorComponent', () => {
     let component: ContadorComponent;
     let fixture: ComponentFixture<ContadorComponent>;
 
-    beforeEach(() => {
+    beforeEach(() => {//se tiver 10 testes ela vai ser executada 10 vezes, a instancia de um teste eh statless nao carrega o estado anterior
         TestBed.configureTestingModule({
             declarations: [
                 ContadorComponent
