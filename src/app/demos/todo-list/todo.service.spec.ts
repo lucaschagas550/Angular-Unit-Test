@@ -28,7 +28,7 @@ describe('TasksService', () => {
     beforeEach(() => {
         const bed = TestBed.configureTestingModule({
             providers: [
-                { provide: HttpClient, useClass: MockHttp },
+                { provide: HttpClient, useClass: MockHttp }, //Vai resolver httpClient para a classe MockHttp
                 TasksService,
                 Store
             ]
@@ -38,7 +38,7 @@ describe('TasksService', () => {
     });
 
     it('Deve retornar lista de tarefas', () => {
-        //spyOn(http, 'get').and.returnValue(createResponse(todolist));
+        //spyOn(http, 'get').and.returnValue(createResponse(todolist)); //http seria uma instancia de MockHttp
 
         service.getTodoList$
             .subscribe((result) => {

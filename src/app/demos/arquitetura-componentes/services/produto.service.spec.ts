@@ -25,7 +25,7 @@ const produtosFake: Produto[] = [{
     imagem: 'laptop.jpg'
 }];
 
-const produtoFake: Produto = 
+const produtoFake: Produto =
 {
     id: 2,
     nome: 'Teste 2',
@@ -45,11 +45,11 @@ describe('ProdutoService', () => {
             ]
         });
 
-        service = bed.get(ProdutoService);
+        service = bed.get(ProdutoService);// devolve a instancia do objeto declarado como provider
     });
 
     it('Deve retornar uma lista de produtos', () => {
-        spyOn(service, 'obterTodos').and.returnValue(produtosFake);
+        spyOn(service, 'obterTodos').and.returnValue(produtosFake); //spyOn => Mock para returnar os produtosFake quando metodo obterTodos for chamado
 
         let result = service.obterTodos('ativos');
 
