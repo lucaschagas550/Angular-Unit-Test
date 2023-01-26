@@ -3,7 +3,7 @@ import { AppBasePage } from '../app.base.po';
 
 export class AppCadastroPage extends AppBasePage {
 
-  constructor() { super(); }
+  constructor() { super(); } // para usar os metodos da classe base
 
   navegarParaCadastro() {
     this.navegarViaUrl('/cadastro');
@@ -36,5 +36,5 @@ export class AppCadastroPage extends AppBasePage {
 
   obterErroSenha() {
     return this.obterElementoXpath('/html/body/app-root/app-cadastro/div/form/div/div[5]/div/span').getText();
-  } 
+  }
 }
